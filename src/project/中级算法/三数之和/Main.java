@@ -1,4 +1,4 @@
-package Project.中级算法.三数之和;
+package project.中级算法.三数之和;
 
 import java.util.ArrayList;
 import java.util.Arrays;

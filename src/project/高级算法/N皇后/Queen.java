@@ -1,10 +1,9 @@
-package Project.中级算法.N皇后;
+package project.高级算法.N皇后;
 
 public class Queen {
-    private static int[] data = new int[100];
     private static int n;
 
-    public static void show() {
+    public static void show(int[] data) {
         int i, j;
         System.out.print("[");
         for (i = 0; i < n; i++) {
@@ -24,9 +23,9 @@ public class Queen {
         }
     }
 
-    public static boolean check_queen_valid(int row, int column) {
+    public static boolean check_queen_valid(int row, int column, int[] data) {
         int i;
-        for (i = 0; i < row; i++) {
+        for (i = 0; i <= row; i++) {
             if (data[i] == column) {
                 return false;
             } else if (data[i] + i == row + column) {
@@ -38,26 +37,31 @@ public class Queen {
         return true;
     }
 
-    public static void find_suitable_queen(int row) {
+    public static void find(int row, int[] data) {
         int i;
         if (row == n) {
             return;
         }
         for (i = 0; i < n; i++) {
-            if (check_queen_valid(row, i)) {
+            if (check_queen_valid(row, i, data)) {
                 data[row] = i;
                 if (row == n - 1) {
-                    show();
+                    show(data);
                 } else {
-                    find_suitable_queen(row + 1);
+                    find(row + 1, data);
                 }
             }
         }
-        data[row] = 0;
+    }
+
+    public static void find_suitable_queen(int row) {
+        n = row;
+        int[] data = new int[100];
+        find(0, data);
     }
 
     public static void main(String[] args) {
-        n = 3;
-        find_suitable_queen(0);
+        n = 4;
+        find_suitable_queen(n);
     }
 }

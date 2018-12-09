@@ -1,4 +1,4 @@
-package Project.中级算法.字谜分组;
+package project.中级算法.字谜分组;
 
 import java.util.*;
 

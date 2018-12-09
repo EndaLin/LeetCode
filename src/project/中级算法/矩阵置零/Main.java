@@ -1,4 +1,4 @@
-package Project.中级算法.矩阵置零;
+package project.中级算法.矩阵置零;
 
 public class Main {
     public static void setZeroes(int[][] matrix) {
