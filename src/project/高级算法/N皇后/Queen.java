@@ -1,67 +1,71 @@
 package project.高级算法.N皇后;
 
-public class Queen {
-    private static int n;
+import java.util.ArrayList;
+import java.util.List;
 
-    public static void show(int[] data) {
+public class Queen {
+
+    public static void add(int[] data, int n, List<String> ans) {
         int i, j;
-        System.out.print("[");
+        StringBuffer str = new StringBuffer();
         for (i = 0; i < n; i++) {
-            System.out.print("\"");
+            str.delete(0, str.length());
             for (j = 0; j < n; j++) {
                 if (j == data[i]) {
-                    System.out.print("Q");
+                    str.append("Q");
                 } else {
-                    System.out.print(".");
+                    str.append(".");
                 }
             }
-            if (i != n - 1) {
-                System.out.println("\",");
-            } else {
-                System.out.println("\"]");
-            }
+            ans.add(str.toString());
         }
     }
 
     public static boolean check_queen_valid(int row, int column, int[] data) {
         int i;
-        for (i = 0; i <= row; i++) {
+        if (row == 0 && column == 0) {
+            return true;
+        }
+        for (i = 0; i < row; i++) {
             if (data[i] == column) {
                 return false;
-            } else if (data[i] + i == row + column) {
+            } else if (i + data[i] == row + column) {
                 return false;
-            } else if (data[i] - i == row - column) {
+            } else if (i - data[i] == row - column) {
                 return false;
             }
         }
         return true;
     }
 
-    public static void find(int row, int[] data) {
+    public static void find(int row, int[] data, int maxRow, List<List<String>> list) {
         int i;
-        if (row == n) {
+        if (row == maxRow) {
             return;
         }
-        for (i = 0; i < n; i++) {
+        for (i = 0; i < maxRow; i++) {
             if (check_queen_valid(row, i, data)) {
                 data[row] = i;
-                if (row == n - 1) {
-                    show(data);
+                if (row == maxRow - 1) {
+                    List<String> ans = new ArrayList<>();
+                    add(data, maxRow,ans);
+                    list.add(ans);
                 } else {
-                    find(row + 1, data);
+                    find(row + 1, data, maxRow, list);
                 }
             }
         }
     }
 
-    public static void find_suitable_queen(int row) {
-        n = row;
+    public static List<List<String>> solveNQueens(int n)  {
         int[] data = new int[100];
-        find(0, data);
+        List<List<String>> list = new ArrayList<>();
+        find(0, data, n, list);
+        return list;
+
     }
 
     public static void main(String[] args) {
-        n = 4;
-        find_suitable_queen(n);
+        System.out.print(solveNQueens(4).toString());
     }
 }
