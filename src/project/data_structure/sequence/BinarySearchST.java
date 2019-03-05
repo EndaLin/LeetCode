@@ -54,7 +54,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
             values[j] = values[j - 1];
         }
         keys[i] = key;
-        values = values;
+        values[i] = value;
         N++;
     }
 
