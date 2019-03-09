@@ -1,4 +1,4 @@
-package project.Intermediate_algorithm.Remove_Duplicates_from_Sorted_Array;
+package project.algorithm.Remove_Duplicates_from_Sorted_Array;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package project.Intermediate_algorithm.Find_the_single_one;
+package project.algorithm.Find_the_single_one;
 
 /**
  * @author wt

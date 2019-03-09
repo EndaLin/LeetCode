@@ -1,6 +1,5 @@
-package project.Intermediate_algorithm.The_intersection_of_two_arrays;
+package project.algorithm.The_intersection_of_two_arrays;
 
-import javax.naming.event.ObjectChangeListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 
