@@ -1,4 +1,4 @@
-package project.data_structure.Linked_List.Design_Circular_Queue;
+package project.data_structure.Queue.Design_Circular_Queue;
 
 /**
  * @author wt
