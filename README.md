@@ -1,3 +1,3 @@
 # LeetCode
 
-LeetCode, 牛客网
+持之以恒, 坚为必成
