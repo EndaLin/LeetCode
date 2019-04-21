@@ -25,4 +25,4 @@ The total minimum cost is 10 + 30 + 50 + 20 = 110 to have half the people interv
 - 1 <= costs[i][0], costs[i][1] <= 1000
 
 #### Solution
-![Solution](leetcode.png)
+[Solution](leetcode.png)
