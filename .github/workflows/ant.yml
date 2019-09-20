@@ -7,5 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: Print a greeting
-      run: 
+      run: |
         echo 'Awesome work!'
