@@ -6,6 +6,6 @@ jobs:
   greeting:
     runs-on: ubuntu-latest
     steps:
-    - uses: Print a greeting
+    - name: Print a greeting
       run: |
         echo 'Awesome work!'
