@@ -33,7 +33,7 @@
  *     Tremors (1990)
  *     ...
  *     Apollo 13 (1995)
- *     Animal House (1978)
+ *     basic.Animal House (1978)
  *
  * 
  *  Assumes that input file is encoded using UTF-8.

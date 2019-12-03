@@ -1,6 +1,6 @@
 /******************************************************************************
- *  Compilation:  javac Cat.java
- *  Execution:    java Cat input0.txt input1.txt ... output.txt
+ *  Compilation:  javac basic.Cat.java
+ *  Execution:    java basic.Cat input0.txt input1.txt ... output.txt
  *  Dependencies: In.java Out.java
  *  Data files:   https://algs4.cs.princeton.edu/11model/in1.txt
  *                https://algs4.cs.princeton.edu/11model/in2.txt
@@ -16,7 +16,7 @@
  *  a tiny
  *  test.
  * 
- *  % java Cat in1.txt in2.txt out.txt
+ *  % java basic.Cat in1.txt in2.txt out.txt
  *
  *  % more out.txt
  *  This is
@@ -28,7 +28,7 @@
 package project.data_structure.sample;
 
 /**
- *  The {@code Cat} class provides a client for concatenating the results
+ *  The {@code basic.Cat} class provides a client for concatenating the results
  *  of several text files.
  *  <p>
  *  For additional documentation, see <a href="https://algs4.cs.princeton.edu/11model">Section 1.1</a> of

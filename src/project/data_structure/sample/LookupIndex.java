@@ -17,7 +17,7 @@
  *
  *  % java LookupIndex movies.txt "/"
  *  Bacon, Kevin
- *    Animal House (1978)
+ *    basic.Animal House (1978)
  *    Apollo 13 (1995)
  *    Beauty Shop (2005)
  *    Diner (1982)
