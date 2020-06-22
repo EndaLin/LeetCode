@@ -10,7 +10,9 @@ public class Code_04_UnionFind {
 	}
 
 	public static class UnionFindSet {
+		// key : child, value : father
 		public HashMap<Node, Node> fatherMap;
+		// Node : 代表节点，Integer : 整个集合有多少个元素
 		public HashMap<Node, Integer> sizeMap;
 
 		public UnionFindSet() {
